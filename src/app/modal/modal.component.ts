@@ -16,6 +16,7 @@ export class ModalComponent implements OnInit {
 
   constructor(public postService: PostService) {}
   addPost(form: NgForm) {
+    console.log('received the post', form);
     this.postService.addPostService(
       form.value.title,
       form.value.content,
